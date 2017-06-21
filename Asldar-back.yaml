@@ -1,0 +1,28 @@
+
+hunting_info:
+- :zone: buccas
+  :duration: 27
+  args:
+  - back
+  - d0
+  stop_on:
+  - Twohanded Blunt
+  before:
+  - emcharge
+  - help_start
+  after:
+  - arcana_bootstrap
+  - pathwayStop
+  - crossing-repair
+  - pick
+
+dance_skill: Brawling
+
+weapon_training:
+  Brawling: ''
+  Twohanded Blunt: maul
+  
+summoned_weapons:
+- name: Twohanded Blunt
+  turn: false
+summoned_weapons_element: electric

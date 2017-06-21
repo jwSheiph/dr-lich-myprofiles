@@ -1,0 +1,269 @@
+---
+# https://elanthipedia.play.net/Paladin#Circle_Requirements
+# 3 Magics: Arcana, Augmentation, Attunement
+# 4 Weapons (only 2 are needed to circle): Brawling, Heavy Thrown, Polearms, Twohanded Edged
+# 2 Armors: Plate Armor, Shield Usage
+# 4 Survivals: Athletics, Perception, Skinning, Outdoorsmanship (Does not include Evasion)
+# 3 Lores: Appraisal, Tactics, Scholarship
+
+# You do not need to train any more Magic skills to circle
+# However, you will probably end up training them all since they each have very useful spells
+# The other Magic skills are: Targeted Magic, Warding, Debilitation, Utility
+
+# Hunting settings
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+- Crossbow
+- Heavy Thrown
+- Shield Usage
+- Plate Armor
+- Parry Ability
+
+hunting_file_list:
+  - back
+  - up
+  - back
+hunting_info:
+- :zone: reavers
+  args:
+  - SETUP
+  - d1
+  :duration: 20
+  stop_on:
+  - Shield Usage
+  - Plate Armor
+  - Parry Ability
+
+# Gear settings
+gear:
+# - :adjective: example
+#   :name: gear
+#   :is_leather: true
+#   :hinders_lockpicking: false
+#   :is_worn: true
+## MAIN BODY
+- :adjective: full
+  :name: plate
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+## HELM
+- :adjective: metal
+  :name: armet
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+## SHIELD
+- :adjective: warrior's
+  :name: shield
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+##  PARRY
+- :adjective: parry
+  :name: stick
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+## HANDS
+- :adjective: plate
+  :name: gauntlets
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+
+##  BRAWLING
+# - :adjective: brass
+#   :name: knuckles
+#   :is_leather: false
+#   :hinders_lockpicking: true
+#   :is_worn: true
+# - :adjective: elbow
+#   :name: spikes
+#   :is_leather: false
+#   :hinders_lockpicking: false
+#   :is_worn: true
+
+##  WEAPONS
+- :adjective: mahogany
+  :name: crossbow
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: false
+- :adjective:
+  :name: cutlass
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+- :adjective: throwing
+  :name: hammer
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :tie_to: bandolier
+- :adjective:
+  :name: arbalest
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+- :adjective:
+  :name: blades
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+- :adjective: kertig
+  :name: maul
+  :is_worn: false
+  :is_leather: false
+  :hinders_lockpicking: false
+- :adjective:
+  :name: bola
+  :is_worn: false
+  :is_leather: false
+  :hinders_lockpicking: false
+
+
+gear_sets:
+  standard:
+  - full plate
+  - metal armet
+  - warrior's shield
+  - plate gauntlets
+  - parry stick
+# - brass knuckles
+# - elbow spikes
+
+# Combat settings
+buff_spells:
+  Heroic Strength:
+    abbrev: HES
+    recast: 1
+    mana: 10
+    cambrinth:
+    - 4
+
+  Aspirant's Aegis:
+    abbrev: AA
+    recast: 1
+    mana: 10
+    cambrinth:
+    - 4
+
+## Sorc/Analougus
+
+  Ease Burden:
+    abbrev: EASE
+    recast: 1
+    mana: 20
+
+prehunt_buffs: 8245
+
+waggle_sets:
+  prehunt_buffs:
+    Heroic Strength:
+      abbrev: HES
+      recast: 1
+      mana: 10
+      cambrinth:
+      - 5
+
+    Aspirant's Aegis:
+      abbrev: AA
+      recast: 1
+      mana: 10
+      cambrinth:
+      - 5
+
+    Ease Burden:
+      abbrev: EASE
+      recast: 1
+      mana: 20
+
+
+### Combat Magic ###
+hunting_room_min_mana: 9
+hunting_room_strict_mana: false
+offensive_spells:
+  - name: Stun Foe
+    abbrev: SF
+    mana: 1
+    cast_only_to_train: true
+    max_threshold: 2
+
+  - name: Footman's Strike
+    abbrev: FST
+    mana: 2
+    min_threshold: 2
+
+
+dance_skill: Small Edged
+training_abilities:
+  Tactics: 30
+  Hunt: 80
+  Perc: 120
+
+buff_nonspells:
+  Slam Left: 140
+
+weapon_training:
+  Brawling: ''
+# Heavy Thrown: throwing hammer
+# Small Edged: cutlass
+# Crossbow: arbalest
+# Offhand Weapon: cutlass
+# Large Blunt: throwing hammer
+# Twohanded Blunt: kertig maul
+#  Light Thrown: blades # Have to put blade stacks as blades or it won't work
+
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 1
+  tie_bundle: true
+
+# Non-combat settings
+exp_timers:
+  Attunement: 130
+crossing_training:
+- Appraisal
+- Athletics
+- Perception
+- Augmentation
+- Attunement
+- Outdoorsmanship
+- Scholarship
+- Mechanical Lore
+
+braid_item: grass
+
+training_spells:
+  Augmentation:
+    abbrev: HES
+  Warding:
+    abbrev: AA
+  Utility:
+    abbrev: VOS
+prep_scaling_factor: 1.0
+
+
+safe_room: 8245
+cambrinth: cambrinth.ring
+cambrinth_cap: 5
+tithe: true
+favor_goal: 50
+favor_god: Chadatru
+
+storage_containers:
+  - satchel
+  - pack
+
+hand_armor: plate gauntlets
+
+stop_pick_on_mindlock: true
+use_lockpick_ring: true
+skip_lockpick_ring_refill: false
+lockpick_type: ordinary
+harvest_traps: false
+picking_box_source: pack
+picking_box_storage: satchel
+#lockpick_dismantle:

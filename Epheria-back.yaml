@@ -1,0 +1,13 @@
+hunting_info:
+- :zone: reavers
+  args:
+  - BACK
+  - d0
+  :duration: 30
+  stop_on:
+  - Light Thrown
+
+weapon_training:
+  Light Thrown: bola
+  Twohanded Blunt: kertig maul
+  Small Edged: cutlass

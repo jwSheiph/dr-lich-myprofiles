@@ -1,0 +1,18 @@
+hunting_info:
+- :zone: bone_wolves
+  args:
+  - UP
+  - d1
+  :duration: 15
+  stop_on:
+  - Parry Ability
+  - Shield Usage
+  - Plate Armor
+
+weapon_training:
+  Heavy Thrown: throwing hammer
+  Small Edged: cutlass
+  Twohanded Blunt: kertig maul
+  Crossbow: arbalest
+  Offhand Weapon: cutlass
+  Large Blunt: throwing hammer

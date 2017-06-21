@@ -1,0 +1,159 @@
+---
+# https://elanthipedia.play.net/Bard#Circle_Requirements
+# 4 Magics: Attunement, Arcana, Utility, Augmentation
+# 3 Weapons (only 2 are needed to circle): Brawling, Heavy Thrown, Large Blunt
+# 2 Armors (only 1 is needed to circle): Light Armor, Shield Usage
+# 4 Survivals: Perception, Outdoorsmanship, Athletics, Stealth
+# 3 Lores: Appraisal, Tactics, Scholarship (Does not include Performance or Bardic Lore)
+
+# Eventually you will need to train 1 more Magic to circle (for a total of 5)
+# However, you will probably end up training them all since they each have very useful spells
+# The other Magic skills are: Warding, Targeted Magic, and Debilitation
+
+# Hunting settings
+training_manager_hunting_priority: false
+training_manager_priority_skills:
+- Heavy Thrown
+- Twohanded Blunt
+- Light Armor
+hunting_info:
+- :zone: rats
+  stop_on:
+  - Heavy Thrown
+  - Twohanded Blunt
+  - Light Armor
+  - Tactics
+  - Stealth
+
+# Gear settings
+gear:
+# - :adjective: example
+#   :name: gear
+#   :is_leather: true
+#   :hinders_lockpicking: false
+#   :is_worn: true
+- :adjective: rugged
+  :name: gloves
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: buff
+  :name: coat
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective:
+  :name: cowl
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: target
+  :name: shield
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: parry
+  :name: stick
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+#- :adjective: brass
+#  :name: knuckles
+#  :is_leather: false
+#  :hinders_lockpicking: true
+#  :is_worn: true
+- :adjective: elbow
+  :name: spikes
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: 
+  :name: maul
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :wield: true
+- :adjective: throwing
+  :name: club
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+
+gear_sets:
+  standard:
+  - buff coat
+  - cowl
+  - rugged gloves
+  - target shield
+  - parry stick
+  - elbow spikes
+
+# Combat settings
+offensive_spells:
+- skill: Targeted Magic
+  abbrev: BOS
+  mana: 1
+  cambrinth:
+  - 1
+
+- skill: Debilitation
+  abbrev: AEWO
+  mana: 1
+  cyclic: true
+  cambrinth:
+  - 1
+
+buff_spells:
+  Eillie's Cry:
+    abbrev: ECRY
+    recast: 1
+    mana: 1
+    cambrinth:
+    - 1
+
+dance_skill: Large Blunt
+training_abilities:
+  Tactics: 30
+  Stealth: 60
+  Hunt: 80
+  Perc: 120
+  Scream: 15
+
+weapon_training:
+  Brawling: ''
+  Heavy Thrown: maul
+  Large Blunt: throwing hammer
+  Twohanded Blunt: maul
+
+# Non-combat settings
+crossing_training:
+- Appraisal
+- Athletics
+- Augmentation
+- Attunement
+- Utility
+- Outdoorsmanship
+- Perception
+- Scholarship
+
+exp_timers:
+  Attunement: 130
+  Utility: 90
+training_spells:
+  Utility:
+    abbrev: CARE
+    cyclic: true
+  Augmentation:
+    abbrev: ECRY
+
+
+# Misc. QOL settings
+arrange_count: 3
+tie_bundle: true
+
+safe_room: 984
+cambrinth: cambrinth ring
+cambrinth_cap: 5
+
+favor_goal: 25
+favor_god: Faenella

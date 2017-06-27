@@ -11,19 +11,7 @@
 # The other Magic skills are: Warding, Targeted Magic, and Debilitation
 
 # Hunting settings
-training_manager_hunting_priority: false
-training_manager_priority_skills:
-- Heavy Thrown
-- Twohanded Blunt
-- Light Armor
-hunting_info:
-- :zone: rats
-  stop_on:
-  - Heavy Thrown
-  - Twohanded Blunt
-  - Light Armor
-  - Tactics
-  - Stealth
+
 
 # Gear settings
 gear:
@@ -32,61 +20,84 @@ gear:
 #   :is_leather: true
 #   :hinders_lockpicking: false
 #   :is_worn: true
+## Armors ##
 - :adjective: rugged
   :name: gloves
   :is_leather: true
   :hinders_lockpicking: true
   :is_worn: true
-- :adjective: buff
-  :name: coat
+- :adjective: black
+  :name: leathers
   :is_leather: true
-  :hinders_lockpicking: false
+  :hinders_lockpicking: true
   :is_worn: true
 - :adjective:
   :name: cowl
   :is_leather: true
   :hinders_lockpicking: true
   :is_worn: true
-- :adjective: target
-  :name: shield
-  :is_leather: false
-  :hinders_lockpicking: true
-  :is_worn: true
-- :adjective: parry
-  :name: stick
+   
+## Weapons ##
+- :adjective: azurelle
+  :name: longbow
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: true
-#- :adjective: brass
-#  :name: knuckles
-#  :is_leather: false
-#  :hinders_lockpicking: true
-#  :is_worn: true
+  :wield: false
 - :adjective: elbow
   :name: spikes
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: true
-- :adjective: 
-  :name: maul
+  :wield: false
+- :adjective: parry
+  :name: stick
   :is_leather: false
   :hinders_lockpicking: false
-  :is_worn: false
-  :wield: true
+  :is_worn: true
+  :wield: false
+- :adjective: target
+  :name: shield
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :wield: false
 - :adjective: throwing
   :name: club
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: false
+  :wield: true
+- :adjective:
+  :name: blades
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :wield: false
+- :adjective: bronze
+  :name: club
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :wield: false
+
+
+## Misc ##
+# - :adjective: example
+#   :name: gear
+#   :is_leather: true
+#   :hinders_lockpicking: false
+#   :is_worn: true
 
 gear_sets:
   standard:
-  - buff coat
+  - black leathers
   - cowl
   - rugged gloves
   - target shield
   - parry stick
   - elbow spikes
+  - azurelle longbow
 
 # Combat settings
 offensive_spells:
@@ -111,7 +122,7 @@ buff_spells:
     cambrinth:
     - 1
 
-dance_skill: Large Blunt
+dance_skill: Brawling
 training_abilities:
   Tactics: 30
   Stealth: 60
@@ -120,13 +131,15 @@ training_abilities:
   Scream: 15
 
 weapon_training:
+  Bow: azurelle longbow
   Brawling: ''
-  Heavy Thrown: maul
-  Large Blunt: throwing hammer
-  Twohanded Blunt: maul
+  Light Thrown: throwing club
+  Small Blunt: throwing club
+  Small Edged: blades
 
 # Non-combat settings
 crossing_training:
+- Performance
 - Appraisal
 - Athletics
 - Augmentation
@@ -135,10 +148,12 @@ crossing_training:
 - Outdoorsmanship
 - Perception
 - Scholarship
+- Mechanical Lore
 
 exp_timers:
   Attunement: 130
   Utility: 90
+  Augmentation: 90
 training_spells:
   Utility:
     abbrev: CARE

@@ -79,14 +79,11 @@ gear:
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: false
-<<<<<<< HEAD
 - :adjective:
   :name: blades
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: false
-
-=======
   :wield: false
 
 
@@ -96,7 +93,6 @@ gear:
 #   :is_leather: true
 #   :hinders_lockpicking: false
 #   :is_worn: true
->>>>>>> b62a90f2216687ed66cd4e7e6a639b830282b4a3
 
 gear_sets:
   standard:

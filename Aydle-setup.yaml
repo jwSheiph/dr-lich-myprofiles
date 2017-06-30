@@ -37,8 +37,8 @@ gear:
   :is_leather: true
   :hinders_lockpicking: true
   :is_worn: true
-- :adjective: buff
-  :name: coat
+- :adjective: black
+  :name: leathers
   :is_leather: true
   :hinders_lockpicking: false
   :is_worn: true
@@ -78,10 +78,16 @@ gear:
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: false
+- :adjective:
+  :name: blades
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+
 
 gear_sets:
   standard:
-  - buff coat
+  - black leathers
   - cowl
   - rugged gloves
   - target shield

@@ -212,8 +212,9 @@ weapon_training:
 # Crossbow: arbalest
 # Offhand Weapon: cutlass
 # Large Blunt: throwing hammer
-# Twohanded Blunt: kertig maul
-#  Light Thrown: blades # Have to put blade stacks as blades or it won't work
+  Twohanded Blunt: kertig maul
+  Light Thrown: bola
+# Light Thrown: blades # Have to put blade stacks as blades or it won't work
 
 skinning:
   skin: true

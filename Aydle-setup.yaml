@@ -38,18 +38,27 @@ gear:
   :is_worn: true
    
 ## Weapons ##
+## Ranged ##
 - :adjective: azurelle
   :name: longbow
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: true
   :wield: false
+## Brawling ##
 - :adjective: elbow
   :name: spikes
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: true
   :wield: false
+- :adjective: spiked
+  :name: knuckles
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :wield: false
+## Defensive ##
 - :adjective: parry
   :name: stick
   :is_leather: false
@@ -62,6 +71,7 @@ gear:
   :hinders_lockpicking: true
   :is_worn: true
   :wield: false
+## Melee/Multi ##
 - :adjective: throwing
   :name: club
   :is_leather: false
@@ -79,15 +89,14 @@ gear:
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: false
-- :adjective:
-  :name: blades
+
+## Misc ##
+- :adjective: knitting
+  :name: needles
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: false
-  :wield: false
-
-
-## Misc ##
+  :tie_to: seamstress' belt
 # - :adjective: example
 #   :name: gear
 #   :is_leather: true
@@ -102,7 +111,14 @@ gear_sets:
   - target shield
   - parry stick
   - elbow spikes
+  - spiked knuckles
   - azurelle longbow
+  stealing:
+  - parry stick
+  - azurelle longbow
+
+hand_armor: gloves
+footwear:
 
 # Combat settings
 offensive_spells:
@@ -111,6 +127,7 @@ offensive_spells:
   mana: 1
   cambrinth:
   - 1
+  cast_only_to_train: false
 
 - skill: Debilitation
   abbrev: AEWO
@@ -118,6 +135,7 @@ offensive_spells:
   cyclic: true
   cambrinth:
   - 1
+  cast_only_to_train: true
 
 buff_spells:
   Eillie's Cry:
@@ -126,6 +144,13 @@ buff_spells:
     mana: 1
     cambrinth:
     - 1
+
+  Ease Burden:
+    abbrev: EASE
+    recast: 1
+    mana: 7
+    cambrinth:
+    - 4
 
 dance_skill: Brawling
 training_abilities:
@@ -142,6 +167,8 @@ weapon_training:
   Small Blunt: throwing club
   Small Edged: blades
 
+combat_trainer_target_increment: 7
+
 # Non-combat settings
 crossing_training:
 - Performance
@@ -153,6 +180,7 @@ crossing_training:
 - Outdoorsmanship
 - Perception
 - Scholarship
+- Sorcery
 - Mechanical Lore
 
 exp_timers:
@@ -166,14 +194,55 @@ training_spells:
   Augmentation:
     abbrev: ECRY
 
+forage_item: dirt
+braid_item: grass
 
 # Misc. QOL settings
 arrange_count: 3
 tie_bundle: true
+storage_containers:
+  - carryall
 
-safe_room: 984
+repair_every: 2
+
+safe_room: 832
+crossing_training_sorcery_room: 1651
 cambrinth: cambrinth ring
 cambrinth_cap: 5
+listen: true
 
 favor_goal: 25
 favor_god: Faenella
+
+## Stealing Settings ##
+stealing_bag: thigh.pouch
+bin_stolen: true
+stealing_high_acceptable_count:
+stealing_low_acceptable_count:
+steal_past_mindlock: false
+stealing_buffs:
+npc_stealing_attempt_count: 0
+dont_steal_list:
+
+## Picking Settings ##
+stop_pick_on_mindlock: true
+use_lockpick_ring: true
+skip_lockpick_ring_refill: false
+lockpick_type: ordinary
+harvest_traps: false
+picking_box_source: carryall
+picking_box_storage: carryall
+lockpick_dismantle: shriek
+
+## Crafting ##
+train_workorders:
+  - Tailoring
+workorder_diff: challenging
+crafting_container: collector's apron
+outfitting_belt: 
+  name: seamstress' belt
+  items:
+    - knitting needles
+    - yardstick
+knitting_tools:
+- knitting needles

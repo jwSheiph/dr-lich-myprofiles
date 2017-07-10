@@ -11,7 +11,21 @@
 # The other Magic skills are: Warding, Targeted Magic, and Debilitation
 
 # Hunting settings
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+- Bow
+- Debilitation
 
+hunting_file_list:
+  - setup
+hunting_info:
+- :zone: goblins
+  :duration: 17
+  args:
+  - setup
+  stop_on:
+  - Bow
+  - Light Armor
 
 # Gear settings
 gear:
@@ -78,6 +92,7 @@ gear:
   :hinders_lockpicking: false
   :is_worn: false
   :wield: true
+  :lodges: false
 - :adjective:
   :name: blades
   :is_leather: false
@@ -152,6 +167,11 @@ buff_spells:
     cambrinth:
     - 4
 
+  Redeemer's Pride:
+    abbrev: REPR
+    recast: 1
+    mana: 7
+
 dance_skill: Brawling
 training_abilities:
   Tactics: 30
@@ -181,23 +201,28 @@ crossing_training:
 - Perception
 - Scholarship
 - Sorcery
+- Warding
 - Mechanical Lore
 
-exp_timers:
-  Attunement: 130
-  Utility: 90
-  Augmentation: 90
+# exp_timers:
+#   Attunement: 90
+#   Utility: 20
+#   Augmentation: 20
+#   Warding: 20
 training_spells:
   Utility:
     abbrev: CARE
     cyclic: true
   Augmentation:
     abbrev: ECRY
+  Warding:
+    abbrev: REPR
 
 forage_item: dirt
 braid_item: grass
 
 # Misc. QOL settings
+hometown: Crossing
 arrange_count: 3
 tie_bundle: true
 storage_containers:
@@ -244,5 +269,7 @@ outfitting_belt:
   items:
     - knitting needles
     - yardstick
+    - scissors
+    - sewing needles
 knitting_tools:
 - knitting needles

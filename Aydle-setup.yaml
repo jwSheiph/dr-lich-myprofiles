@@ -19,7 +19,7 @@ training_manager_priority_skills:
 hunting_file_list:
   - setup
 hunting_info:
-- :zone: goblins
+- :zone: grass_eels
   :duration: 17
   args:
   - setup
@@ -55,7 +55,7 @@ gear:
 ## Ranged ##
 - :adjective: azurelle
   :name: longbow
-  :is_leather: false
+  :is_leather: true
   :hinders_lockpicking: false
   :is_worn: true
   :wield: false
@@ -242,10 +242,11 @@ favor_god: Faenella
 ## Stealing Settings ##
 stealing_bag: thigh.pouch
 bin_stolen: true
-stealing_high_acceptable_count:
-stealing_low_acceptable_count:
+stealing_high_acceptable_count: 2
+stealing_low_acceptable_count: 2
 steal_past_mindlock: false
 stealing_buffs:
+
 npc_stealing_attempt_count: 0
 dont_steal_list:
 
@@ -256,7 +257,7 @@ skip_lockpick_ring_refill: false
 lockpick_type: ordinary
 harvest_traps: false
 picking_box_source: carryall
-picking_box_storage: carryall
+picking_box_storage: haversack
 lockpick_dismantle: shriek
 
 ## Crafting ##

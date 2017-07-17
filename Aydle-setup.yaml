@@ -19,8 +19,8 @@ training_manager_priority_skills:
 hunting_file_list:
   - setup
 hunting_info:
-- :zone: grass_eels
-  :duration: 17
+- :zone: scouts
+#  :duration: 17
   args:
   - setup
   stop_on:
@@ -139,31 +139,36 @@ footwear:
 offensive_spells:
 - skill: Targeted Magic
   abbrev: BOS
-  mana: 1
+  mana: 2
   cambrinth:
-  - 1
-  cast_only_to_train: false
+  - 3
+
+- skill: Debilitation
+  abbrev: DMRS
+  mana: 3
+  cambrinth:
+  - 4
 
 - skill: Debilitation
   abbrev: AEWO
-  mana: 1
+  mana: 2
   cyclic: true
   cambrinth:
-  - 1
+  - 3
   cast_only_to_train: true
 
 buff_spells:
   Eillie's Cry:
     abbrev: ECRY
     recast: 1
-    mana: 1
+    mana: 11
     cambrinth:
-    - 1
+    - 4
 
   Ease Burden:
     abbrev: EASE
     recast: 1
-    mana: 7
+    mana: 11
     cambrinth:
     - 4
 
@@ -172,10 +177,56 @@ buff_spells:
     recast: 1
     mana: 7
 
+waggle_sets:
+  default:
+    Ease Burden:
+      abbrev: EASE
+      recast: 1
+      mana: 11
+      cambrinth:
+      - 4
+
+    Eillie's Cry:
+      abbrev: ECRY
+      recast: 1
+      mana: 11
+      cambrinth:
+      - 4
+
+    Whispers of the Muse:
+      abbrev: WOTM
+      recast: 1
+      mana: 9
+      cambrinth:
+      - 4
+
+  prehunt_buffs:
+    Ease Burden:
+      abbrev: EASE
+      recast: 1
+      mana: 11
+      cambrinth:
+      - 4
+
+    Eillie's Cry:
+      abbrev: ECRY
+      recast: 1
+      mana: 11
+      cambrinth:
+      - 4  
+  
+    Redeemer's Pride:
+      abbrev: REPR
+      recast: 1
+      mana: 7
+
+
+## Combat Mechanics ##
 dance_skill: Brawling
 training_abilities:
   Tactics: 30
   Stealth: 60
+  Recall: 230
   Hunt: 80
   Perc: 120
   Scream: 15
@@ -186,23 +237,26 @@ weapon_training:
   Light Thrown: throwing club
   Small Blunt: throwing club
   Small Edged: blades
+  Offhand Weapon: blades
 
-combat_trainer_target_increment: 7
+#combat_trainer_target_increment: 10
+use_weak_attacks: true
 
 # Non-combat settings
 crossing_training:
 - Performance
+- Mechanical Lore
+- Sorcery
 - Appraisal
 - Athletics
-- Augmentation
 - Attunement
 - Utility
+- Augmentation
+- Warding
 - Outdoorsmanship
 - Perception
 - Scholarship
 - Sorcery
-- Warding
-- Mechanical Lore
 
 # exp_timers:
 #   Attunement: 90
@@ -227,8 +281,9 @@ arrange_count: 3
 tie_bundle: true
 storage_containers:
   - carryall
+  - haversack
 
-repair_every: 2
+repair_every: 3
 
 safe_room: 832
 crossing_training_sorcery_room: 1651
@@ -258,6 +313,7 @@ lockpick_type: ordinary
 harvest_traps: false
 picking_box_source: carryall
 picking_box_storage: haversack
+picking_pet_box_source: haversack
 lockpick_dismantle: shriek
 
 ## Crafting ##

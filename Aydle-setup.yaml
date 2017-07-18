@@ -19,7 +19,7 @@ training_manager_priority_skills:
 hunting_file_list:
   - setup
 hunting_info:
-- :zone: scouts
+- :zone: cave_bears
 #  :duration: 17
   args:
   - setup
@@ -137,6 +137,14 @@ footwear:
 
 # Combat settings
 offensive_spells:
+
+- skill: Debilitation
+  abbrev: AEWO
+  mana: 2
+  cyclic: true
+  cambrinth:
+  - 3
+
 - skill: Targeted Magic
   abbrev: BOS
   mana: 2
@@ -148,14 +156,6 @@ offensive_spells:
   mana: 3
   cambrinth:
   - 4
-
-- skill: Debilitation
-  abbrev: AEWO
-  mana: 2
-  cyclic: true
-  cambrinth:
-  - 3
-  cast_only_to_train: true
 
 buff_spells:
   Eillie's Cry:
@@ -240,7 +240,7 @@ weapon_training:
   Offhand Weapon: blades
 
 #combat_trainer_target_increment: 10
-use_weak_attacks: true
+#use_weak_attacks: true
 
 # Non-combat settings
 crossing_training:

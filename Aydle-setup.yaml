@@ -19,13 +19,14 @@ training_manager_priority_skills:
 hunting_file_list:
   - setup
 hunting_info:
-- :zone: cave_bears
-#  :duration: 17
+- :zone: reavers
+  :duration: 20
   args:
   - setup
   stop_on:
-  - Bow
+  - Stealth
   - Light Armor
+  - Debilitation
 
 # Gear settings
 gear:

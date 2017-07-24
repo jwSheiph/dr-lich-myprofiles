@@ -13,20 +13,35 @@
 # Hunting settings
 training_manager_hunting_priority: true
 training_manager_priority_skills:
-- Bow
 - Debilitation
+- Stealth
+- Light Armor
 
 hunting_file_list:
   - setup
+  - bow
+  - melee
+  - bow
 hunting_info:
 - :zone: reavers
   :duration: 20
   args:
   - setup
+  - r0
   stop_on:
   - Stealth
   - Light Armor
   - Debilitation
+  before:
+  - sell-loot
+  - study-art
+
+empty_hunting_room_messages:
+- Hello?  Anyone hiding in this room?
+- Mind if I join the hunt?
+- Pardon, is this spot taken?
+- Cynaed?  Epheria?  You here?
+- Oh!
 
 # Gear settings
 gear:
@@ -87,24 +102,25 @@ gear:
   :is_worn: true
   :wield: false
 ## Melee/Multi ##
-- :adjective: throwing
-  :name: club
+- :adjective:
+  :name: maul
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: false
   :wield: true
-  :lodges: false
+  :lodges: true
 - :adjective:
   :name: blades
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: false
   :wield: false
-- :adjective: bronze
-  :name: club
+- :adjective:
+  :name: bola
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: false
+  :lodges: false
 
 ## Misc ##
 - :adjective: knitting
@@ -140,64 +156,77 @@ footwear:
 offensive_spells:
 
 - skill: Debilitation
+  name: Aether Wolves
   abbrev: AEWO
-  mana: 2
+  mana: 3
   cyclic: true
-  cambrinth:
-  - 3
+  # cambrinth:
+  # - 3
 
 - skill: Targeted Magic
+  name: Breath of Storms
   abbrev: BOS
-  mana: 2
-  cambrinth:
-  - 3
+  mana: 5
+  # cambrinth:
+  # - 3
 
 - skill: Debilitation
+  name: Demrris' Resolve
   abbrev: DMRS
-  mana: 3
-  cambrinth:
-  - 4
+  mana: 7
+  # cambrinth:
+  # - 4
+
+# offensive_spell_cycle:
+# - AEWO
+# - DMRS
+# - BOS
+# - BOS
+# - DMRS
+# - BOS
+# - BOS  
 
 buff_spells:
+
   Eillie's Cry:
     abbrev: ECRY
     recast: 1
-    mana: 11
-    cambrinth:
-    - 4
+    mana: 18
+    # cambrinth:
+    # - 4
 
   Ease Burden:
     abbrev: EASE
     recast: 1
-    mana: 11
-    cambrinth:
-    - 4
+    mana: 18
+    # cambrinth:
+    # - 4
 
   Redeemer's Pride:
     abbrev: REPR
     recast: 1
-    mana: 7
+    mana: 11
 
 waggle_sets:
   default:
     Ease Burden:
       abbrev: EASE
       recast: 1
-      mana: 11
+      mana: 14
       cambrinth:
       - 4
 
     Eillie's Cry:
       abbrev: ECRY
       recast: 1
-      mana: 11
+      mana: 16
       cambrinth:
       - 4
 
     Whispers of the Muse:
       abbrev: WOTM
       recast: 1
-      mana: 9
+      mana: 12
       cambrinth:
       - 4
 
@@ -212,33 +241,35 @@ waggle_sets:
     Eillie's Cry:
       abbrev: ECRY
       recast: 1
-      mana: 11
+      mana: 13
       cambrinth:
       - 4  
   
     Redeemer's Pride:
       abbrev: REPR
       recast: 1
-      mana: 7
+      mana: 11
 
 
 ## Combat Mechanics ##
-dance_skill: Brawling
+dance_skill: Heavy Thrown
 training_abilities:
-  Tactics: 30
-  Stealth: 60
-  Recall: 230
-  Hunt: 80
+  Tactics: 80
+  Stealth: 58
+  Recall: 900
+  Hunt: 130
   Perc: 120
   Scream: 15
 
 weapon_training:
-  Bow: azurelle longbow
-  Brawling: ''
-  Light Thrown: throwing club
-  Small Blunt: throwing club
-  Small Edged: blades
-  Offhand Weapon: blades
+  # Bow: azurelle longbow
+  # Brawling: ''
+  Light Thrown: bola
+  # Small Blunt: bola
+  # Small Edged: blades
+  # Offhand Weapon: blades
+  # Twohanded Blunt: maul
+  Heavy Thrown: maul
 
 #combat_trainer_target_increment: 10
 #use_weak_attacks: true
@@ -287,6 +318,7 @@ storage_containers:
 repair_every: 3
 
 safe_room: 832
+saferoom_health_threshold: 5
 crossing_training_sorcery_room: 1651
 cambrinth: cambrinth ring
 cambrinth_cap: 5
@@ -299,9 +331,9 @@ favor_god: Faenella
 stealing_bag: thigh.pouch
 bin_stolen: true
 stealing_high_acceptable_count: 2
-stealing_low_acceptable_count: 2
+stealing_low_acceptable_count: 1
 steal_past_mindlock: false
-stealing_buffs:
+#stealing_buffs:
 
 npc_stealing_attempt_count: 0
 dont_steal_list:

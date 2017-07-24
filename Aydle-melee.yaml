@@ -1,0 +1,32 @@
+---
+hunting_info:
+- :zone: reavers
+  :duration: 20
+  args:
+  - melee
+  stop_on:
+  - Stealth
+  - Light Armor
+  - Debilitation
+  before:
+  - study-art
+
+## Combat Mechanics ##
+dance_skill: Brawling
+training_abilities:
+  Tactics: 137
+  Stealth: 180
+  Recall: 900
+  Hunt: 130
+  Perc: 120
+  Scream: 17
+
+weapon_training:
+  # Bow: azurelle longbow
+  Brawling: ''
+  # Light Thrown: bola
+  Small Blunt: bola
+  Small Edged: blades
+  Offhand Weapon: blades
+  Twohanded Blunt: maul
+  # Heavy Thrown: maul

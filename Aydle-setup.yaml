@@ -34,7 +34,6 @@ hunting_info:
   - Debilitation
   before:
   - sell-loot
-  - study-art
 
 empty_hunting_room_messages:
 - Hello?  Anyone hiding in this room?
@@ -160,31 +159,33 @@ offensive_spells:
   abbrev: AEWO
   mana: 3
   cyclic: true
-  # cambrinth:
-  # - 3
 
 - skill: Targeted Magic
   name: Breath of Storms
   abbrev: BOS
   mana: 5
-  # cambrinth:
-  # - 3
+
+- skill: Sorcery
+  name: Stampede
+  abbrev: stampede
+  mana: 4
+  prep: target
 
 - skill: Debilitation
   name: Demrris' Resolve
   abbrev: DMRS
   mana: 7
-  # cambrinth:
-  # - 4
+
 
 # offensive_spell_cycle:
 # - AEWO
 # - DMRS
 # - BOS
-# - BOS
+# - stampede
 # - DMRS
+# - stampede
 # - BOS
-# - BOS  
+# - BOS
 
 buff_spells:
 
@@ -278,7 +279,7 @@ weapon_training:
 crossing_training:
 - Performance
 - Mechanical Lore
-- Sorcery
+#- Sorcery
 - Appraisal
 - Athletics
 - Attunement
@@ -288,7 +289,7 @@ crossing_training:
 - Outdoorsmanship
 - Perception
 - Scholarship
-- Sorcery
+#- Sorcery
 
 # exp_timers:
 #   Attunement: 90
@@ -304,21 +305,28 @@ training_spells:
   Warding:
     abbrev: REPR
 
+prep_scaling_factor: 1.0
+
 forage_item: dirt
 braid_item: grass
 
 # Misc. QOL settings
 hometown: Crossing
-arrange_count: 3
-tie_bundle: true
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 3
+  tie_bundle: true
+
 storage_containers:
   - carryall
   - haversack
+  - thigh.pouch
 
 repair_every: 3
 
 safe_room: 832
-saferoom_health_threshold: 5
+saferoom_health_threshold: 8
 crossing_training_sorcery_room: 1651
 cambrinth: cambrinth ring
 cambrinth_cap: 5

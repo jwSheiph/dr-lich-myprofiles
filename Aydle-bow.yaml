@@ -4,6 +4,7 @@ hunting_info:
   :duration: 15
   args:
   - bow
+  - r1
   stop_on:
   - Stealth
   - Light Armor

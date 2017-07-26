@@ -23,7 +23,7 @@ hunting_file_list:
   - melee
   - bow
 hunting_info:
-- :zone: reavers
+- :zone: beisswurms
   :duration: 20
   args:
   - setup

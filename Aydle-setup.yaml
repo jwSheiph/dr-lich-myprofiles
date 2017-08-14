@@ -19,11 +19,11 @@ training_manager_priority_skills:
 
 hunting_file_list:
   - setup
+#  - backs
   - bow
   - melee
-  - bow
 hunting_info:
-- :zone: beisswurms
+- :zone: endrus_serpents
   :duration: 20
   args:
   - setup
@@ -154,11 +154,16 @@ footwear:
 # Combat settings
 offensive_spells:
 
+# - skill: Debilitation
+#   name: Aether Wolves
+#   abbrev: AEWO
+#   mana: 3
+#   cyclic: true
+
 - skill: Debilitation
-  name: Aether Wolves
-  abbrev: AEWO
-  mana: 3
-  cyclic: true
+  name: Damaris' Lullaby
+  abbrev: DALU
+  mana: 6
 
 - skill: Targeted Magic
   name: Breath of Storms
@@ -168,7 +173,9 @@ offensive_spells:
 - skill: Sorcery
   name: Stampede
   abbrev: stampede
-  mana: 4
+  mana: 2
+  cambrinth:
+  - 6
   prep: target
 
 - skill: Debilitation
@@ -195,6 +202,11 @@ buff_spells:
     mana: 18
     # cambrinth:
     # - 4
+
+  Rage of the Clans:
+    abbrev: RAGE
+    recast: 3
+    mana: 16
 
   Ease Burden:
     abbrev: EASE
@@ -312,24 +324,33 @@ braid_item: grass
 
 # Misc. QOL settings
 hometown: Crossing
+
+## Hunting ##
 skinning:
   skin: true
   arrange_all: false
   arrange_count: 3
   tie_bundle: true
 
+## Magic ##
+crossing_training_sorcery_room: 1651
+cambrinth: cambrinth ring
+dedicated_cambrinth_use: cyclic
+cambrinth_cap: 8
+hunting_room_min_mana: 4
+hunting_room_strict_mana: false
+
+## Misc. ##
 storage_containers:
   - carryall
   - haversack
   - thigh.pouch
 
-repair_every: 3
+sell_loot_pouch: false
 
+repair_every: 3
 safe_room: 832
 saferoom_health_threshold: 8
-crossing_training_sorcery_room: 1651
-cambrinth: cambrinth ring
-cambrinth_cap: 5
 listen: true
 
 favor_goal: 25
@@ -347,7 +368,7 @@ npc_stealing_attempt_count: 0
 dont_steal_list:
 
 ## Picking Settings ##
-stop_pick_on_mindlock: true
+stop_pick_on_mindlock: false
 use_lockpick_ring: true
 skip_lockpick_ring_refill: false
 lockpick_type: ordinary

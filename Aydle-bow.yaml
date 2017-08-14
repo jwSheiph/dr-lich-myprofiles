@@ -1,7 +1,7 @@
 ---
 hunting_info:
-- :zone: buccas
-  :duration: 15
+- :zone: rock_trolls
+  :duration: 10
   args:
   - bow
   - r1
@@ -11,6 +11,7 @@ hunting_info:
   - Debilitation
   before:
   - xclimb
+  - attunement
 
 ## Combat Mechanics ##
 dance_skill: Bow

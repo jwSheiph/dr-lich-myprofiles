@@ -1,7 +1,7 @@
 ---
 hunting_info:
-- :zone: beisswurms
-  :duration: 20
+- :zone: endrus_serpents
+  :duration: 10
   args:
   - melee
   stop_on:
@@ -30,3 +30,32 @@ weapon_training:
   Offhand Weapon: blades
   Twohanded Blunt: maul
   # Heavy Thrown: maul
+
+offensive_spells:
+
+- skill: Debilitation
+  name: Aether Wolves
+  abbrev: AEWO
+  mana: 3
+  cyclic: true
+
+# - skill: Debilitation
+#   name: Damaris' Lullaby
+#   abbrev: DALU
+#   mana: 6
+
+- skill: Targeted Magic
+  name: Breath of Storms
+  abbrev: BOS
+  mana: 5
+
+- skill: Sorcery
+  name: Stampede
+  abbrev: stampede
+  mana: 7
+  prep: target
+
+- skill: Debilitation
+  name: Demrris' Resolve
+  abbrev: DMRS
+  mana: 7
